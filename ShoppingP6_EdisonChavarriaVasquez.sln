@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingP6_EdisonChavarriaVasquez.Android", "ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonChavarriaVasquez.Android\ShoppingP6_EdisonChavarriaVasquez.Android.csproj", "{8063D515-F0A6-45BA-AC03-87DEA59D00F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingP6_EdisonChavarriaVasquez", "ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonChavarriaVasquez.csproj", "{C1911EC6-347A-4A94-9F1E-582245FE4504}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShoppingP6_EdisonCV", "ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonCV.csproj", "{C1911EC6-347A-4A94-9F1E-582245FE4504}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

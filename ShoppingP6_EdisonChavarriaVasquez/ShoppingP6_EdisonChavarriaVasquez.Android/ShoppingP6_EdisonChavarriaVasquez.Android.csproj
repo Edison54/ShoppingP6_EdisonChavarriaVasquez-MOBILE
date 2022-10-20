@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -87,10 +87,13 @@
     <AndroidResource Include="Resources\drawable\icon_feed.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonChavarriaVasquez.csproj">
-      <Project>{B7C34050-44C7-4C6D-8B5D-DA3E876F6968}</Project>
-      <Name>ShoppingP6_EdisonChavarriaVasquez</Name>
+    <ProjectReference Include="..\ShoppingP6_EdisonChavarriaVasquez\ShoppingP6_EdisonCV.csproj">
+      <Project>{C1911EC6-347A-4A94-9F1E-582245FE4504}</Project>
+      <Name>ShoppingP6_EdisonCV</Name>
     </ProjectReference>
   </ItemGroup>
- <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\appba.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
