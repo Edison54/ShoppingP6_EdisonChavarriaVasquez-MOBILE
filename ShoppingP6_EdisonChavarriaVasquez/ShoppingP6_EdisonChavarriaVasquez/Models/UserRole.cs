@@ -24,6 +24,7 @@ namespace ShoppingP6_EdisonCV.Models
         public int IduserRole { get; set; }
         public string UserRoleDescription { get; set; } = null!;
 
+     
         //public virtual ICollection<User> Users { get; set; }
 
         //FUNCIONES PARA EL MODELO
@@ -34,6 +35,7 @@ namespace ShoppingP6_EdisonCV.Models
 
             try
             {
+
                 string RouteSufix = string.Format("UserRoles");
                 string FinalURL = Services.CnnToP6API.ProductionURL + RouteSufix;
 

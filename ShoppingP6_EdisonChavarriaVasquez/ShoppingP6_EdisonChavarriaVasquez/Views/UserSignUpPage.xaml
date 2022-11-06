@@ -13,7 +13,7 @@
             <Entry x:Name="TxtPhone" Placeholder="Phone number" />
 
             <Picker x:Name="PckUserRoles" Title="Select a user role" ItemDisplayBinding="{Binding UserRoleDescription}"/>
-            <Picker x:Name="PckCountry" Title="Select a country" />
+            <Picker x:Name="PckCountry" Title="Select a country" ItemDisplayBinding="{Binding CountryName}" />
 
             <Button x:Name="BtnAdd" Text="Add" FontSize="25"  CornerRadius="5" BackgroundColor="#0C61E4"  Clicked="BtnAdd_Clicked"/>
 

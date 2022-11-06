@@ -12,12 +12,14 @@ namespace ShoppingP6_EdisonCV.ViewModels
     {
         public UserRole MyUserRole { get; set; }
 
+        public Country MyCountry { get; set; }
         public User MyUser { get; set; }
       
         public UserViewModel()
         {
             MyUserRole = new UserRole();
             MyUser = new User();
+            MyCountry = new Country();
         }
 
         public async Task<List<UserRole>> GetUserRolelist()
@@ -39,6 +41,32 @@ namespace ShoppingP6_EdisonCV.ViewModels
                 }
             }
             catch(Exception)
+            {
+
+                return null;
+            }
+        }
+
+
+        public async Task<List<Country>> GetCountrylist()
+        {
+
+            try
+            {
+                List<Country> list = new List<Country>();
+
+                list = await MyCountry.GetCountry();
+
+                if (list == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return list;
+                }
+            }
+            catch (Exception)
             {
 
                 return null;

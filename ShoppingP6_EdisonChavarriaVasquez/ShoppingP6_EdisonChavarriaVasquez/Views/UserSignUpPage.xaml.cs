@@ -22,6 +22,7 @@ namespace ShoppingP6_EdisonCV.Views
             //se agrega un biding context
             BindingContext = viewModel = new UserViewModel();
             LoadUserRolesList();
+            LoadCountryList();
         }
 
 
@@ -29,6 +30,13 @@ namespace ShoppingP6_EdisonCV.Views
         {
             PckUserRoles.ItemsSource = await viewModel.GetUserRolelist();
         }
+
+        private async void LoadCountryList()
+        {
+            PckCountry.ItemsSource = await viewModel.GetCountrylist();
+        }
+
+
 
         private async void BtnCancel_Clicked(object sender, EventArgs e)
         {
