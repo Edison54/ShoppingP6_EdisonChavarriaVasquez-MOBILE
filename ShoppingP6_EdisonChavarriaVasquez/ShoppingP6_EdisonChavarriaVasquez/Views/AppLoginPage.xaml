@@ -22,7 +22,7 @@
         
         
       
-                <Button x:Name="BtnLogin" Text="Login" FontSize="25" CornerRadius="10" BackgroundColor="#A3F08C"/>     
+                <Button x:Name="BtnLogin" Text="Login" FontSize="25" CornerRadius="10" BackgroundColor="#A3F08C" Clicked="BtnLogin_Clicked"/>     
         <Button x:Name="BtnSignUp" Text="Sign Up" FontSize="25"  CornerRadius="10" BackgroundColor="#0C61E4" Clicked="BtnSignUp_Clicked"/>
         
 

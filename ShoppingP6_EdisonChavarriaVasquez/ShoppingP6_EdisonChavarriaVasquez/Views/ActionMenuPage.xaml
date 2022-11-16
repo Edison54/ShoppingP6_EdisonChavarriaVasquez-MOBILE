@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingP6_EdisonCV.Views.ActionMenuPage">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <Grid>
+                <Label Text="Select an action" 
+                       VerticalOptions="StartAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"/>
+
+                <FlexLayout Wrap="Wrap"
+                            JustifyContent="SpaceAround"
+                            Direction="Row" 
+                            AlignContent="Start"
+                            Padding="0,30,0,20">
+
+                    <Button Text="Create invoices"
+                           HeightRequest="200"  
+                           WidthRequest="200"   
+                           FontSize="20"
+                           HorizontalOptions="Center"
+                           CornerRadius="10"
+                           
+
+                           
+                           />
+
+                </FlexLayout>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

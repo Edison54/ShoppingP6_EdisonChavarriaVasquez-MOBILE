@@ -111,5 +111,37 @@ namespace ShoppingP6_EdisonCV.ViewModels
                 IsBusy = false;
             }
                    }
+
+
+        //funcion de ingreso al app del usuario
+
+        public async Task<bool> UserAccessValidation(string pEmail , string pUserPassword)
+        {
+         if(IsBusy)return false;
+            IsBusy = true;
+
+            try
+            {
+                MyUser.Email = pEmail;
+                MyUser.UserPassword= pUserPassword;
+
+                bool R = await MyUser.ValidateLogin();
+
+                return R;
+
+            }
+            catch(Exception)
+            {
+
+                return false;
+                throw;
+            }
+            finally 
+            { IsBusy = false; } 
+
+
+        }
+
+
     }
 }

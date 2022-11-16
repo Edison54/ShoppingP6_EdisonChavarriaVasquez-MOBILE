@@ -91,7 +91,54 @@ namespace ShoppingP6_EdisonCV.Models
 
         }
 
+        public async Task<bool> ValidateLogin()
+        {
 
+            try
+            {
+                string RouteSufix = string.Format("Users/ValidateLogin?UserName={0}&UserPassword={1}",
+                    this.Email , this.UserPassword);
+                string FinalURL = Services.CnnToP6API.ProductionURL + RouteSufix;
+
+                RestClient client = new RestClient(FinalURL);
+
+                request = new RestRequest(FinalURL, Method.Get);
+
+                //agregar la info de seguridad del api , aqui va la apikey
+
+                request.AddHeader(Services.CnnToP6API.ApiKeyName, Services.CnnToP6API.ApiKeyValue);
+                request.AddHeader(contentype, mimetype);
+
+                
+
+                RestResponse response = await client.ExecuteAsync(request);
+
+                HttpStatusCode statusCode = response.StatusCode;
+
+                //carga de info en un json
+
+
+                if (statusCode == HttpStatusCode.OK)
+                {
+                    //carga de info en un json
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                string msg = ex.Message;
+
+                //to do guardar errores en una bitacora.
+                throw;
+            }
+
+        }
 
 
     }
