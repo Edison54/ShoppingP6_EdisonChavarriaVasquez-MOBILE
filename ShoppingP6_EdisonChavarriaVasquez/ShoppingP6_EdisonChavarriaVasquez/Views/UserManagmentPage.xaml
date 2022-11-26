@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ShoppingP6_EdisonCV.Views.UserManagmentPage">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="20,150,20,0" HorizontalOptions="FillAndExpand" >
+                <!-- TO DO : Agregar imagen de usario default-->
+
+                <Entry x:Name="TxtName" Placeholder="Name" >
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Black"/>
+                            <Setter Property="TextColor" Value="white"/>
+                            <Setter Property="FontSize" Value="30"/>
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+                
+                
+                <Entry x:Name="TxtEmail" Placeholder="Email" Keyboard="Email">
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Black"/>
+                            <Setter Property="TextColor" Value="Black"/>
+                            <Setter Property="FontSize" Value="30"/>
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+
+                <Entry x:Name="TxtPassword" Placeholder="Password" IsPassword="True" >
+                    <Entry.Triggers>
+                        <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Black"/>
+                            <Setter Property="TextColor" Value="white"/>
+                            <Setter Property="FontSize" Value="30"/>
+                        </Trigger>
+                    </Entry.Triggers>
+                </Entry>
+
+                <Entry x:Name="TxtEmailBackup" Placeholder="Backup Email" Keyboard="Email">
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Black"/>
+                            <Setter Property="TextColor" Value="white"/>
+                        <Setter Property="FontSize" Value="30"/>
+                    </Trigger>
+                </Entry.Triggers>
+                </Entry>
+                
+                <Entry x:Name="TxtPhone" Placeholder="Phone number" >
+                <Entry.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                            <Setter Property="BackgroundColor" Value="Black"/>
+                            <Setter Property="TextColor" Value="white"/>
+                        <Setter Property="FontSize" Value="30"/>
+                    </Trigger>
+                </Entry.Triggers>
+                </Entry>
+
+                <Picker x:Name="PckUserRoles" Title="Select a user role" ItemDisplayBinding="{Binding UserRoleDescription}"/>
+                <Picker x:Name="PckCountry" Title="Select a country" ItemDisplayBinding="{Binding CountryName}" />
+
+               <Button x:Name="BtnAdd" Text="Add" FontSize="25"  CornerRadius="5" BackgroundColor="Green"  Clicked="BtnAdd_Clicked"/>
+
+                <Button x:Name="BtnCancel" Text="Cancel" FontSize="25"  CornerRadius="5" BackgroundColor="Maroon" Clicked="BtnCancel_Clicked" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

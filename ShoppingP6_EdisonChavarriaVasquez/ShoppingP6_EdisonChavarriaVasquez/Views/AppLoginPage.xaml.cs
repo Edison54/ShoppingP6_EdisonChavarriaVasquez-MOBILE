@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Acr.UserDialogs;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using ShoppingP6_EdisonCV;
 
 namespace ShoppingP6_EdisonChavarriaVasquez.Views
 {
@@ -53,10 +55,30 @@ namespace ShoppingP6_EdisonChavarriaVasquez.Views
                TxtPassword.Text != null && !string.IsNullOrEmpty(TxtPassword.Text.Trim()))
             {
 
-                string u = TxtUsername.Text.Trim();
-                string p = TxtPassword.Text.Trim();
-                R = await vm.UserAccessValidation(u, p);
+                try
+                {
+                    UserDialogs.Instance.ShowLoading("Checking user data . . .");
+                    await Task.Delay(1000);
+                    string u = TxtUsername.Text.Trim();
+                    string p = TxtPassword.Text.Trim();
 
+                    R = await vm.UserAccessValidation(u, p);
+
+                  
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                finally 
+                {
+
+                    UserDialogs.Instance.HideLoading();
+                }
+              
+
+               
             }
             else
             {
@@ -67,9 +89,21 @@ namespace ShoppingP6_EdisonChavarriaVasquez.Views
 
             if (R)
             {
-                // await DisplayAlert("c:", "User ok", "OK");
+
+                try
+                {
+                    //todo: cargar info en un objeto global tipo user (o userDTO)
+                    GlobalObjects.GlobalUser = await vm.GetUserData(TxtUsername.Text.Trim());
+                }
+                catch (Exception ex)
+                {
+                    await DisplayAlert("Error", ex.Message, "OK");
+                    return;
+                }
+               
+
                 await Navigation.PushAsync(new ActionMenuPage());
-                //todo ; mostrar la page de seleccion de acciones del sistemas
+               
             }
             else
             {

@@ -16,5 +16,10 @@ namespace ShoppingP6_EdisonCV.Views
         {
             InitializeComponent();
         }
+
+        private async void BtnUserConfig_Clicked(object sender, EventArgs e)
+        {
+await Navigation.PushAsync(new UserManagmentPage());
+        }
     }
 }

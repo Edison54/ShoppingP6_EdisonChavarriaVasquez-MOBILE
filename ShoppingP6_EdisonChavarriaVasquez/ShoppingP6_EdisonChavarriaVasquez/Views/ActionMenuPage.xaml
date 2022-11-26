@@ -4,34 +4,82 @@
              x:Class="ShoppingP6_EdisonCV.Views.ActionMenuPage">
     <ContentPage.Content>
 
-        <ScrollView>
-            <Grid>
-                <Label Text="Select an action" 
-                       VerticalOptions="StartAndExpand"
+        <ScrollView BackgroundColor="#807A7A">
+
+            <FlexLayout Direction="Column" 
+                        AlignItems="Center" 
+                        JustifyContent="Start">
+                
+                <Label  
+                     Text="Select an action" 
+                       VerticalOptions="CenterAndExpand" 
                        HorizontalOptions="CenterAndExpand"
                        HorizontalTextAlignment="Center"
-                       FontSize="Large"/>
+                       VerticalTextAlignment="Center"
+                       FontSize="30" TextColor="Black"
+                       />
+               
 
-                <FlexLayout Wrap="Wrap"
-                            JustifyContent="SpaceAround"
-                            Direction="Row" 
-                            AlignContent="Start"
-                            Padding="0,30,0,20">
+                <Grid   RowSpacing="20" ColumnSpacing="20" Padding="0,50,0,0">
 
-                    <Button Text="Create invoices"
-                           HeightRequest="200"  
-                           WidthRequest="200"   
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+
+                        <Button  Grid.Row="0" Grid.Column="0" Text="Buy"
+                           HeightRequest="150"  
+                           WidthRequest="150"   
                            FontSize="20"
                            HorizontalOptions="Center"
-                           CornerRadius="10"
-                           
-
-                           
+                           CornerRadius="10" BackgroundColor="#74AD38"
+                            TextColor="Black"      
                            />
 
-                </FlexLayout>
+                    <Button  Grid.Row="0" Grid.Column="1" Text="Manage items"
+                           HeightRequest="150"  
+                           WidthRequest="150"   
+                           FontSize="20"
+                           HorizontalOptions="Center"
+                           CornerRadius="10" BackgroundColor="#D0C739"
+                             TextColor="Black" 
+                           />
 
-            </Grid>
+                    <Button  Grid.Row="1" Grid.Column="0" Text="Manage store"
+                           HeightRequest="150"  
+                           WidthRequest="150"   
+                           FontSize="20"
+                           HorizontalOptions="Center"
+                           CornerRadius="10" BackgroundColor="#2B52D2"
+                           TextColor="Black"
+                             />
+
+                    <Button x:Name="BtnUserConfig"
+                        Grid.Row="1" Grid.Column="1" Text="User config"
+                           HeightRequest="150"  
+                           WidthRequest="150"   
+                           FontSize="20"
+                           HorizontalOptions="Center"
+                           CornerRadius="10" BackgroundColor="#693CDF"
+                            TextColor="Black"   Clicked="BtnUserConfig_Clicked"
+                           />
+
+
+                </Grid>
+
+            </FlexLayout>
+            
+            
+            
+            
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

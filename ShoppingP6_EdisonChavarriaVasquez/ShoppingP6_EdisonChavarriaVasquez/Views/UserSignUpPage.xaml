@@ -7,9 +7,9 @@
             <!-- TO DO : Agregar imagen de usario default-->
 
             <Entry x:Name="TxtName" Placeholder="Name" />
-            <Entry x:Name="TxtEmail" Placeholder="Email" />
+            <Entry x:Name="TxtEmail" Placeholder="Email" Keyboard="Email"/>
             <Entry x:Name="TxtPassword" Placeholder="Password" IsPassword="True" />
-            <Entry x:Name="TxtEmailBackup" Placeholder="Backup Email" />
+            <Entry x:Name="TxtEmailBackup" Placeholder="Backup Email" Keyboard="Email" />
             <Entry x:Name="TxtPhone" Placeholder="Phone number" />
 
             <Picker x:Name="PckUserRoles" Title="Select a user role" ItemDisplayBinding="{Binding UserRoleDescription}"/>
